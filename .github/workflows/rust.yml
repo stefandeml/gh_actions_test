@@ -19,8 +19,10 @@ jobs:
     - name: Install latest nightly
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly
+        toolchain: 1.44.0-nightly
         override: true
+    - name: "Show rustc version"
+      run: rustc --version
     - name: Run cargo test
       run: pip install .
 
