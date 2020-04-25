@@ -1,0 +1,17 @@
+[package]
+authors = ["konstin <konstin@mailbox.org>"]
+name = "pyo3-pure"
+version = "2.1.0"
+description = "Implements a dummy function (get_fortytwo.DummyClass.get_42()) in rust"
+readme = "Readme.md"
+edition = "2018"
+
+[package.metadata.maturin.scripts]
+get_42 = "pyo3_pure:DummyClass.get_42"
+
+[dependencies]
+pyo3 = { version = "0.8.1", features = ["extension-module"] }
+
+[lib]
+name = "pyo3_pure"
+crate-type = ["cdylib"]
