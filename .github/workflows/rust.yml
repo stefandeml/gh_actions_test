@@ -30,11 +30,11 @@ jobs:
       run: rustc --version
     - run: pip install maturin
     - name: Build artifact
-      run: maturin build --release \
-        --manifest-path ../Cargo.toml \
-        --cargo-extra-args='--features python' \
-        --interpreter python${{ matrix.python-version }} \
-        --manylinux 2010 \
+      run: maturin build --release 
+        --manifest-path ../Cargo.toml 
+        --cargo-extra-args='--features python' 
+        --interpreter python${{ matrix.python-version }} 
+        --manylinux 2010 
         --out pkg/
       working-directory: ./py
     - name: Install dependencies
