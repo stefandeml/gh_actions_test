@@ -8,8 +8,12 @@ on:
 
 jobs:
   build:
-
-    runs-on: windows-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    # runs-on: windows-latest
+    # runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 3.7
@@ -24,7 +28,7 @@ jobs:
     - name: "Show rustc version"
       run: rustc --version
     - run: pip install maturin
-    - run: maturin build --release --manifest-path ../Cargo.toml --cargo-extra-args='--features python'
+    - run: maturin build --release --manifest-path ../Cargo.toml --cargo-extra-args='--features python' --interpreter python3.7 python3.6 
       working-directory: ./py
 
 
