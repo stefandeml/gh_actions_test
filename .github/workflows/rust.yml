@@ -24,7 +24,7 @@ jobs:
     - name: "Show rustc version"
       run: rustc --version
     - run: pip install maturin
-    - run: ./build.sh
+    - run: maturin build --release --manifest-path ../Cargo.toml --cargo-extra-args='--features python'
       working-directory: ./py
 
 
