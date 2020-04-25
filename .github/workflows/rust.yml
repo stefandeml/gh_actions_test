@@ -24,7 +24,7 @@ jobs:
     - name: "Show rustc version"
       run: rustc --version
     - run: pip install maturin
-    - run: cd py
     - run: ./build.sh
+      working-directory: ./py
 
 
