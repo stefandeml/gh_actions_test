@@ -8,7 +8,7 @@ use x25519_dalek::PublicKey;
 use x25519_dalek::StaticSecret;
 
 #[pymodule]
-fn chily(_py: Python, m: &PyModule) -> PyResult<()> {
+fn chily2(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<PyNonce>()?;
     m.add_class::<PyStaticSecret>()?;
     m.add_class::<PyPublicKey>()?;
