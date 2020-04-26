@@ -3,7 +3,7 @@ name: Publish to pypi
 on:
   push:
     tags:
-    - '*'
+    - 'chily-v*'
 jobs:
   unix:
     name: linux and macos 
