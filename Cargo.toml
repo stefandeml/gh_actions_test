@@ -1,5 +1,5 @@
 [package]
-name = "chily"
+name = "chily-test"
 version = "0.2.0"
 description = "Crypto wrapper library"
 authors = ["\"decentriq\" <opensource@decentriq.ch>"]
@@ -55,4 +55,4 @@ opt-level = "s"
 [package.metadata.maturin]
 maintainer = "decentriq"
 maintainer-email = "\"decentriq\" <opensource@decentriq.ch>"
-requires-python = "==3.7.*"
+requires-python = ">=3.6"
