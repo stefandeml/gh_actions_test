@@ -1,5 +1,5 @@
 [package]
-name = "chily-test"
+name = "chily_test"
 version = "0.2.0"
 description = "Crypto wrapper library"
 authors = ["\"decentriq\" <opensource@decentriq.ch>"]
